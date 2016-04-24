@@ -23,7 +23,7 @@ namespace paulmemoryboxService.Models
         } 
 
 
-        public DbSet<MemoryModel> MemoryBox { get; set; }
+        //public DbSet<SerializedMemory> SerializedMemories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -31,6 +31,8 @@ namespace paulmemoryboxService.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
+
+        public System.Data.Entity.DbSet<paulmemoryboxService.DataObjects.SerializedMemory> SerializedMemories { get; set; }
     }
 
 }

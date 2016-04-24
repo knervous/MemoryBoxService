@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,12 +7,10 @@ using System.Web;
 namespace paulmemoryboxService.DataObjects
 {
   
-        class SerializedMemory
+        public class SerializedMemory : EntityData
         {
-            public string Data { get; set; }
+            public string MemoryBox { get; set; }
 
-            [Newtonsoft.Json.JsonProperty("Id")]
-            public string Id { get; set; }
         }
  
 }

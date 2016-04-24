@@ -53,16 +53,7 @@ namespace paulmemoryboxService
     {
         protected override void Seed(paulmemoryboxContext context)
         {
-            List<MemoryModel> memoryBoxes = new List<MemoryModel>
-            {
-                new MemoryModel { Id = Guid.NewGuid().ToString(), Name = "Sample Box" },
-                new MemoryModel { Id = Guid.NewGuid().ToString(), Name = "Sample Box 2" },
-            };
 
-            foreach (MemoryModel memBox in memoryBoxes)
-            {
-                context.Set<MemoryModel>().Add(memBox);
-            }
 
             base.Seed(context);
         }
